@@ -470,7 +470,7 @@
           font-size: 3rem;
       }
 
-      nav ul {
+      .nav ul {
           gap: 1rem;
           font-size: 0.85rem;
       }
@@ -489,3 +489,4 @@
           grid-template-columns: 1fr;
       }
   }
+
