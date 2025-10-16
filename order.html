@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- ORDER PAGE -->
+      <nav>
+    <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="order.html">Naruči</a></li>
+        <li><a href="reviews.html">Recenzije</a></li>
+        <li><a href="pricing.html">Cijene i dostava</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="active">Kontakt</a></li>
+    </ul>
+</nav>
+
+    <div id="order" class="page-content">
+        <section class="section">
+            <h2 class="section-title">Odaberi svoj časopis</h2>
+            
+            <div class="form-container">
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="recipient">Za koga je poklon</label>
+                        <input type="text" id="recipient" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="about">Ukratko nešto o njoj (što se veže uz stranice koje si izabrala)</label>
+                        <textarea id="about" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="photos">Pošalji slike koje želiš da uključim</label>
+                        <input type="file" id="photos" multiple accept="image/*">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Povod za izradu magazina:</label>
+                        <div class="occasion-options">
+                            <div class="occasion-option">
+                                <input type="radio" name="occasion" id="birthday" value="Rođendan" required>
+                                <label for="birthday">Rođendan</label>
+                            </div>
+                            <div class="occasion-option">
+                                <input type="radio" name="occasion" id="anniversary" value="Godišnjica">
+                                <label for="anniversary">Godišnjica</label>
+                            </div>
+                            <div class="occasion-option">
+                                <input type="radio" name="occasion" id="travel" value="Putovanje">
+                                <label for="travel">Putovanje</label>
+                            </div>
+                            <div class="occasion-option">
+                                <input type="radio" name="occasion" id="no-occasion" value="Nema povoda">
+                                <label for="no-occasion">Nema povoda</label>
+                            </div>
+                            <div class="occasion-option">
+                                <input type="radio" name="occasion" id="graduation" value="Diploma/kraj škole">
+                                <label for="graduation">Diploma/kraj škole</label>
+                            </div>
+                            <div class="occasion-option">
+                                <input type="radio" name="occasion" id="memories" value="Sjećanja">
+                                <label for="memories">Sjećanja</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Stil časopisa:</label>
+                        <div class="style-options">
+                            <div class="style-option">
+                                <input type="radio" name="style" id="minimalistic" value="Minimalistic" required>
+                                <label for="minimalistic">Minimalistic</label>
+                            </div>
+                            <div class="style-option">
+                                <input type="radio" name="style" id="fun" value="Zabavan">
+                                <label for="fun">Zabavan</label>
+                            </div>
+                            <div class="style-option">
+                                <input type="radio" name="style" id="vintage" value="Vintage/retro">
+                                <label for="vintage">Vintage/retro</label>
+                            </div>
+                            <div class="style-option">
+                                <input type="radio" name="style" id="modern" value="Modern">
+                                <label for="modern">Modern</label>
+                            </div>
+                            <div class="style-option">
+                                <input type="radio" name="style" id="girly" value="Girly">
+                                <label for="girly">Girly</label>
+                            </div>
+                            <div class="style-option">
+                                <input type="radio" name="style" id="glam" value="Glam">
+                                <label for="glam">Glam</label>
+                            </div>
+                            <div class="style-option">
+                                <input type="radio" name="style" id="your-choice" value="Po mom izboru stil">
+                                <label for="your-choice">Po mom izboru stil</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Odaberi stranice za časopis:</label>
+                        <div class="page-options" id="pageOptions"></div>
+                    </div>
+
+                    <button type="submit" class="cta-button" style="width: 100%; margin-top: 2rem;">Pošalji narudžbu</button>
+                </form>
+
+                <div class="success-message" id="successMessage">
+                    <h3>Hvala ti!</h3>
+                    <p>Nakon što pregledam tvoju prijavu, javit ću ti se na Instagramu da dogovorimo detalje.</p>
+                </div>
+            </div>
+        </section>
+    </div> 
+</body>
+<script src="script.js"></script>
+</html>
