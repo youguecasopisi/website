@@ -216,25 +216,28 @@
             border-color: #2c2c2c;
         }
 
-        .page-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
+       .page-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* tačno 3 po redu */
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-items: stretch;
+}
 
-        .page-card {
-            background: white;
-            padding: 1.5rem;
-            border: 1px solid #e0e0e0;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
+    .page-card {
+    background: white;
+    padding: 4rem 2rem;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
 
-        .page-card:hover {
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
-        }
+     .page-card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+}
 
         .page-card input[type="checkbox"] {
             margin-right: 0.5rem;
@@ -244,6 +247,7 @@
             cursor: pointer;
             font-size: 1rem;
             text-transform: none;
+            text-align: center;
         }
 
         .page-details {
@@ -454,6 +458,12 @@
 }
 
 
+@media (max-width: 992px) {
+    .page-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
         @media (max-width: 768px) {
             .logo {
                 font-size: 3rem;
@@ -472,3 +482,9 @@
                 padding: 2rem 1.5rem;
             }
         }
+
+        @media (max-width: 600px) {
+    .page-options {
+        grid-template-columns: 1fr;
+    }
+}
